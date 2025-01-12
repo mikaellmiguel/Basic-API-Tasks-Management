@@ -24,6 +24,16 @@ class TasksController {
         // Respondendo com o codígo (created)
         response.status(201).json();
     }
+
+    async delete(request, response) {
+        const {id} = request.params;
+        const task = await knex("tasks").where({id}).first();
+
+        if(!task) throw new AppError("Não foi encontrado nenhum tarefa com esse ID");
+        await knex("tasks").where({id}).delete();
+    
+        response.json();
+    }
 }
 
 module.exports = TasksController;

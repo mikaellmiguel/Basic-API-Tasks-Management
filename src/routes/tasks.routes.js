@@ -5,5 +5,6 @@ const tasksRouter = Router();
 const tasksController = new TasksController();
 
 tasksRouter.post("/", tasksController.create); // 1. Criar Tarefa
+tasksRouter.delete("/:id", tasksController.delete); // 5. Excluir uma tarefa
 
 module.exports = tasksRouter;
