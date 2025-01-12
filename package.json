@@ -1,0 +1,12 @@
+{
+  "name": "basic-api-tasks-management",
+  "version": "1.0.0",
+  "description": "API Básicade gerenciamento de tarefas construída com Node.js e Express para o Desafio Backend da Monitoria da Disciplina IF977-Engenharia de Software do CIn/UFPE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
