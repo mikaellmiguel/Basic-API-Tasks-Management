@@ -25,6 +25,15 @@ class TasksController {
         response.status(201).json();
     }
 
+    async show(request, response) {
+        const {id} = request.params;
+
+        const task = await knex("tasks").where({id}).first();
+        if(!task) throw new AppError("Não foi encontrado nenhum tarefa com esse ID");
+
+        response.json(task);
+    }
+
     async delete(request, response) {
         const {id} = request.params;
         const task = await knex("tasks").where({id}).first();
