@@ -4,14 +4,15 @@
   "description": "API Básicade gerenciamento de tarefas construída com Node.js e Express para o Desafio Backend da Monitoria da Disciplina IF977-Engenharia de Software do CIn/UFPE.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+    "dev": "npx knex migrate:latest && nodemon ./src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "knex": "^3.1.0"
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
