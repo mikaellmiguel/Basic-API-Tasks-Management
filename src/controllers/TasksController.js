@@ -25,6 +25,11 @@ class TasksController {
         response.status(201).json();
     }
 
+    async index(request, response) {
+        const tasks = await knex("tasks").select();
+        response.json(tasks)
+    }
+
     async show(request, response) {
         const {id} = request.params;
 
