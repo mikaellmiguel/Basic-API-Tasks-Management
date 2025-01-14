@@ -3,6 +3,26 @@
 ## Descrição
 Esta é uma API RESTful desenvolvida para o gerenciamento de tarefas. Ela permite criar, ler, atualizar e excluir tarefas, além de realizar a filtragem com base no status. A aplicação segue boas práticas de desenvolvimento, com validação de dados, modularização de código e interação com um banco de dados.
 
+## Tecnologias Utilizadas
+
+<div>
+    <center>
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"/>
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" />
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/knexjs/knexjs-original.svg" >
+        <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
+    </center>
+</div>
+
+- **JavaScript:** Linguagem principal utilizada no desenvolvimento.
+- **Node.js:** Plataforma de execução para JavaScript no lado do servidor.
+- **Express:** Framework minimalista para criação de APIs.
+- **npm:** Gerenciador de pacotes para instalação de dependências.
+- **Knex.js:** Query builder para interagir com o banco de dados de forma eficiente.
+- **SQLite:** Banco de dados leve e fácil de configurar.
+
 ## POST /tarefas - Criação de um nova Tarefa
 Permite criar uma nova tarefa com as seguintes propriedades:
 - **título**: (String, **obrigatório**)
