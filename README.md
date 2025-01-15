@@ -29,6 +29,41 @@ Esta é uma API RESTful desenvolvida para o gerenciamento de tarefas. Ela permit
 - **Knex.js:** Query builder para interagir com o banco de dados de forma eficiente.
 - **SQLite:** Banco de dados leve e fácil de configurar.
 
+## 🚀 Início Rápido
+
+Siga as etapas abaixo para configurar e executar o projeto localmente:
+
+### Pré-requisitos
+
+Certifique-se de ter o seguinte instalado na sua máquina:
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js)
+
+### Passos para Configuração
+
+1. **Clone o repositório:**
+```bash
+   git clone https://github.com/mikaellmiguel/Basic-API-Tasks-Management
+   cd Basic-API-Tasks-Management
+```
+2. **Instale as dependências:**
+```bash
+   npm install
+```
+3. **Configure as variáveis de ambiente:**
+
+Crie um arquivo .env na raiz do projeto e adicione as variáveis necessárias. Use o arquivo .env.example como referência:
+```bash
+  cp .env.example .env
+```
+4. **Inicie o servidor:**
+
+```bash
+  npm start
+```
+5. **Acesse a aplicação:**
+
+O servidor estará disponível em http://localhost:3000 (ou na porta configurada no .env).
 
 ## Requisições
 
