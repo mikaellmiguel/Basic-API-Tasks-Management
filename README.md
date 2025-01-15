@@ -1,4 +1,12 @@
-# API RESTful para Gerenciamento de Tarefas
+<h1 align="center">API RESTful para Gerenciamento de Tarefas ✔️</h1> 
+  <h3 align="center">Desafio Monitoria de Engenharia de Software - 2024.2 CIn/UFPE - Desafio Backend</h3>
+
+<p align="center">
+    <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />    
+    <br />
+        <a href="https://documenter.getpostman.com/view/40958428/2sAYQWKtWz"><strong>Ir para o Documentação »</strong></a>
+    <br />
+</p>
 
 ## Descrição
 Esta é uma API RESTful desenvolvida para o gerenciamento de tarefas. Ela permite criar, ler, atualizar e excluir tarefas, além de realizar a filtragem com base no status. A aplicação segue boas práticas de desenvolvimento, com validação de dados, modularização de código e interação com um banco de dados.
@@ -6,14 +14,12 @@ Esta é uma API RESTful desenvolvida para o gerenciamento de tarefas. Ela permit
 ## Tecnologias Utilizadas
 
 <div>
-    <center>
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"/>
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" />
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/knexjs/knexjs-original.svg" >
         <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
-    </center>
 </div>
 
 - **JavaScript:** Linguagem principal utilizada no desenvolvimento.
@@ -23,7 +29,10 @@ Esta é uma API RESTful desenvolvida para o gerenciamento de tarefas. Ela permit
 - **Knex.js:** Query builder para interagir com o banco de dados de forma eficiente.
 - **SQLite:** Banco de dados leve e fácil de configurar.
 
-## POST /tarefas - Criação de um nova Tarefa
+
+## Requisições
+
+### POST /tarefas - Criação de um nova Tarefa
 Permite criar uma nova tarefa com as seguintes propriedades:
 - **título**: (String, **obrigatório**)
 - **descrição**: (String, **opcional**)
@@ -46,7 +55,7 @@ Permite criar uma nova tarefa com as seguintes propriedades:
 }
 ```
 
-## GET /tarefas - Listar todas as tarefas
+### GET /tarefas - Listar todas as tarefas
 Retorna todas as tarefas cadastradas no banco de dados.  
 
 **Exemplo de Requisição:**
@@ -73,7 +82,7 @@ Retorna todas as tarefas cadastradas no banco de dados.
 ]
 ```
 
-## GET /tarefas/{id} - Buscar uma tarefa por ID 
+### GET /tarefas/{id} - Buscar uma tarefa por ID 
 Permite buscar os detalhes de uma tarefa específica pelo seu ID. 
 
 **Exemplo de Requisição:**
@@ -91,7 +100,7 @@ Permite buscar os detalhes de uma tarefa específica pelo seu ID.
 }
 ```
 
-## PUT /tarefas/{id} - Atualizar uma tarefa
+### PUT /tarefas/{id} - Atualizar uma tarefa
 Permite atualizar as informações de uma tarefa, como título, descrição, status ou data de vencimento.
 
 **Exemplo de requisição:**
@@ -108,7 +117,7 @@ Permite atualizar as informações de uma tarefa, como título, descrição, sta
 }
 ```
 
-## DELETE /tarefas/{id} - Deletar uma tarefa
+### DELETE /tarefas/{id} - Deletar uma tarefa
 Permite a remoção de uma tarefa pelo seu ID.
 
 **Exemplo de requisição:**
@@ -116,7 +125,7 @@ Permite a remoção de uma tarefa pelo seu ID.
 {endpoint}/tarefas/1
 ```
 
-## GET /tarefas?status={status} - Filtrar tarefa por status
+### GET /tarefas?status={status} - Filtrar tarefa por status
 Permite a filtragem das tarefas com base no status. O parâmetro `status` pode ter os seguintes valores:
 - "pendente"
 - "realizando"
