@@ -59,7 +59,7 @@ class TasksController {
 
         await knex("tasks").where({id}).update(task);
 
-        response.json({...task});
+        response.json();
     }
 
     async delete(request, response) {
