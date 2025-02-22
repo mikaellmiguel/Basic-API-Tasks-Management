@@ -7,6 +7,7 @@ exports.up = knex => knex.schema.createTable("tasks", table => {
     table.text("title");
     table.text("description");
     table.text("status");
+    table.text("priority").nullable();
     table.date("due_date").nullable();
 })
 /**

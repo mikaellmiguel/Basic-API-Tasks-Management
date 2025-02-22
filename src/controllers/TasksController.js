@@ -5,19 +5,21 @@ const isValidDateFormat = require("../utils/isValidDateFormat");
 class TasksController {
     async create(request, response) {
 
-        const {titulo, descricao, status, data_vencimento} = request.body;
+        const {titulo, descricao, status, prioridade, data_vencimento} = request.body;
 
         // Validações de entrada do usuário
         if(!titulo) throw new AppError("A Tarefa deve conter um Título");
         if(!status) throw new AppError("A Tarefa deve possuir um Status");
         if(!["pendente", "concluída", "realizando"].includes(status)) throw new AppError("Deve ser fornecido um Status Válido (pendente, concluída, realizando)");
         if(data_vencimento && !isValidDateFormat(data_vencimento)) throw new AppError("Deve ser fornecido uma data de vencimento válida!");
+        if(!["alta", "média", "baixa"].includes(prioridade)) throw new AppError("Deve ser fornecido uma prioridade válida (alta, média, baixa)");
 
 
         await knex("tasks").insert({
             title: titulo,
             description: descricao,
             status,
+            priority: prioridade,
             due_date: data_vencimento
         });
 
@@ -41,7 +43,7 @@ class TasksController {
 
     async update(request, response) {
         const {id} = request.params;
-        const {titulo, descricao, status, data_vencimento} = request.body;
+        const {titulo, descricao, status, prioridade, data_vencimento} = request.body;
 
         const task = await knex("tasks").where({id}).first();
         if(!task) throw new AppError("Não foi encontrado nenhum tarefa com esse ID");
@@ -56,6 +58,7 @@ class TasksController {
         task.description = descricao || task.description;
         task.status = status || task.status;
         task.due_date = data_vencimento || task.due_date;
+        task.priority = prioridade || task.priority;
 
         await knex("tasks").where({id}).update(task);
 
