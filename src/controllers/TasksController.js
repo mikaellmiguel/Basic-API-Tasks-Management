@@ -14,7 +14,6 @@ class TasksController {
         if(data_vencimento && !isValidDateFormat(data_vencimento)) throw new AppError("Deve ser fornecido uma data de vencimento válida!");
         if(!["alta", "média", "baixa"].includes(prioridade)) throw new AppError("Deve ser fornecido uma prioridade válida (alta, média, baixa)");
 
-
         await knex("tasks").insert({
             title: titulo,
             description: descricao,

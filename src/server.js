@@ -1,13 +1,15 @@
 require("express-async-errors");
 require("dotenv").config();
 
+const cors = require("cors");
+
 const express = require("express");
 const routes = require("./routes");
 const AppError = require("./utils/AppError");
 
 const app = express();
 app.use(express.json());
-
+app.use(cors()); // Habilitando o Cors
 app.use(routes); // Utilizando as rotas criadas
 
 // Tratativa de Erros
